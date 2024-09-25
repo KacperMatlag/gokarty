@@ -8,6 +8,7 @@
     transition: all ease-in-out .3s;
 }
 
+
 .tournamentListElementContiner:hover {
     -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);

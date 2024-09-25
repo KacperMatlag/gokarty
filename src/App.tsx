@@ -1,5 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { MainPage, Tournaments } from "./pages/pagesExport";
+import {
+  MainPage,
+  TournamentEdit,
+  Tournaments,
+  TournamentTable,
+} from "./pages/pagesExport";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import { Footer, Navbar } from "./components/componentsExport";
@@ -19,6 +24,8 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/zawody" element={<Tournaments />} />
+          <Route path="/zawody/wyniki" element={<TournamentTable />} />
+          <Route path="/zawody/edycja" element={<TournamentEdit />} />
         </Routes>
       </div>
       <Footer />

@@ -1,8 +1,10 @@
 import "./tournamentListElement.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTableList } from "@fortawesome/free-solid-svg-icons";
-
+import { useNavigate } from "react-router-dom";
 const TournamentListElement = () => {
+  const navigate = useNavigate();
+
   return (
     <div style={{ padding: "5px", width: "100%" }}>
       <div className="tournamentListElementContiner p-3">
@@ -15,11 +17,21 @@ const TournamentListElement = () => {
           <p>data</p>
         </div>
         <div className="tournamentsControls">
-          <button className="btn btn-dark">
+          <button
+            className="btn btn-dark"
+            onClick={() => {
+              navigate("/zawody/wyniki");
+            }}
+          >
             <FontAwesomeIcon icon={faTableList} />
             Tabela
           </button>
-          <button className="btn btn-light">
+          <button
+            className="btn btn-light"
+            onClick={() => {
+              navigate("/zawody/edycja");
+            }}
+          >
             <FontAwesomeIcon icon={faPenToSquare} />
             Modyfikacja
           </button>
